@@ -30,8 +30,5 @@ function CoffeeTypes($scope) {
    
   ];
   $scope.mood = $scope.moods[1]; // mile end
-
-
-
 }
 
