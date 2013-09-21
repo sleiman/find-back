@@ -1,14 +1,15 @@
-<!doctype html>
 <html ng-app>
-  <head>
-    <script src="js/angular.min.js"></script>
-  </head>
-  <body>
-    <div>
-      <label>Name:</label>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <hr>
-      <h1>Hello {{yourName}}!</h1>
-    </div>
-  </body>
+<head>
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body >
+ 
+  <ul ng-controller="CoffeeTypes">
+    <li ng-repeat="coffee in coffees">
+      {{coffee.name}}
+     
+    </li>
+  </ul>
+</body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" ng-app>
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
@@ -13,47 +13,30 @@
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script src="js/modernizr.custom.js"></script>
 		<script src="js/main.js"></script>
-		<script src="js/angular.min.js"></script>
+		<script src="lib/angular/angular.min.js"></script>
+		<script src="js/controllers.js"></script>
 	</head>
 	<body class="nl-blurred">
-	<a onclick="change()">test</a>
+	
+
 		<div class="container demo-1">
 			<!-- Top Navigation -->
 			
 			
-			<div class="main clearfix">
+			<div class="main clearfix" ng-controller="CoffeeTypes">
 				<form id="nl-form" class="nl-form">
 					I feel like drinking 
-					<select>
-						<option value="1" selected>a latte</option>
-						<option value="2">a cappuccino</option>
-						<option value="3">espresso</option>
-						<option value="4">flat white</option>
-						<option value="5">machiato</option>
-					</select>
+					
+					<select ng-model="coffee" ng-options="a.name for a in coffees"></select>
+
+		
 					<br />in
-					<select>
-						<option value="1" selected>a small</option>
-						<option value="2">a cozy</option>
-						<option value="3">an italian</option>
-						<option value="4">a modern</option>
-						<option value="2">a fancy</option>
-					</select>
+					<select ng-model="size" ng-options="b.name for b in sizes"></select>
 					coffee shop
 					<br />in 
-					<select>
-						<option value="1" selected>Mile End</option>
-					 	<option value="1">Plateau</option>
-					 	<option value="2">Downtown</option>
-					 	<option value="3">Saint-Henri</option>
-					</select>
+					<select ng-model="area" ng-options="c.name for c in areas"></select>
 					and </br> where I can 
-					<select>
-						<option value="1" selected>laugh</option>
-					 	<option value="1">relax</option>
-					 	<option value="2">work</option>
-					 	<option value="3">talk with friend</option>
-					</select>.
+					<select ng-model="mood" ng-options="d.name for d in moods"></select>.
 					<!--in <input type="text" value="" placeholder="any city" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"/>-->
 					<div class="nl-submit-wrap">
 						<button class="nl-submit" onclick="change()" type="submit">Find a coffee shop</button>
