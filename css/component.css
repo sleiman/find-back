@@ -33,7 +33,7 @@
 	font-size: inherit;
 	color: inherit;
 	font-weight: inherit;
-	line-height: inherit;
+	//line-height: inherit;
 	display: inline-block;
 	padding: 0;
 	margin: 0;
@@ -59,11 +59,14 @@
 .nl-field-toggle,
 .nl-form input,
 .nl-form select  {
-	line-height: inherit;
+	//line-height: inherit;
 	display: inline-block;
-	color: #b14943;
+	//color: #b14943;
 	cursor: pointer;
-	border-bottom: 1px dashed #b14943;
+	border: 4px solid #ffffff;
+	padding: 0px 20px 5px 20px;
+	text-align: center;
+	border-radius: 0;
 }
 
 /* drop-down list / text element */
